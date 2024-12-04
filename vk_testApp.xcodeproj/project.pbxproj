@@ -10,9 +10,12 @@
 		8E751E8B2D009AFD000D09B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751E8A2D009AFD000D09B7 /* AppDelegate.swift */; };
 		8E751E8D2D009AFD000D09B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751E8C2D009AFD000D09B7 /* SceneDelegate.swift */; };
 		8E751E8F2D009AFD000D09B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751E8E2D009AFD000D09B7 /* ViewController.swift */; };
-		8E751E922D009AFD000D09B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E751E902D009AFD000D09B7 /* Main.storyboard */; };
 		8E751E942D009AFE000D09B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E751E932D009AFE000D09B7 /* Assets.xcassets */; };
 		8E751E972D009AFE000D09B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E751E952D009AFE000D09B7 /* LaunchScreen.storyboard */; };
+		8E751EA12D00A12A000D09B7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751EA02D00A12A000D09B7 /* NetworkClient.swift */; };
+		8E751EA32D00ABEA000D09B7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751EA22D00ABEA000D09B7 /* Item.swift */; };
+		8E751EA52D00B3D5000D09B7 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751EA42D00B3D5000D09B7 /* RepositoryCell.swift */; };
+		8E751EAB2D00BCB3000D09B7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8E751EAA2D00BCB3000D09B7 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,12 @@
 		8E751E8A2D009AFD000D09B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E751E8C2D009AFD000D09B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8E751E8E2D009AFD000D09B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E751E912D009AFD000D09B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E751E932D009AFE000D09B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E751E962D009AFE000D09B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E751E982D009AFE000D09B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E751EA02D00A12A000D09B7 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		8E751EA22D00ABEA000D09B7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8E751EA42D00B3D5000D09B7 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E751EAB2D00BCB3000D09B7 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,10 +62,12 @@
 		8E751E892D009AFD000D09B7 /* vk_testApp */ = {
 			isa = PBXGroup;
 			children = (
+				8E751EA22D00ABEA000D09B7 /* Item.swift */,
+				8E751EA42D00B3D5000D09B7 /* RepositoryCell.swift */,
+				8E751EA02D00A12A000D09B7 /* NetworkClient.swift */,
 				8E751E8A2D009AFD000D09B7 /* AppDelegate.swift */,
 				8E751E8C2D009AFD000D09B7 /* SceneDelegate.swift */,
 				8E751E8E2D009AFD000D09B7 /* ViewController.swift */,
-				8E751E902D009AFD000D09B7 /* Main.storyboard */,
 				8E751E932D009AFE000D09B7 /* Assets.xcassets */,
 				8E751E952D009AFE000D09B7 /* LaunchScreen.storyboard */,
 				8E751E982D009AFE000D09B7 /* Info.plist */,
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = vk_testApp;
+			packageProductDependencies = (
+				8E751EAA2D00BCB3000D09B7 /* Kingfisher */,
+			);
 			productName = vk_testApp;
 			productReference = 8E751E872D009AFD000D09B7 /* vk_testApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 8E751E7E2D009AFD000D09B7;
+			packageReferences = (
+				8E751EA92D00BCB3000D09B7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 8E751E882D009AFD000D09B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +141,6 @@
 			files = (
 				8E751E972D009AFE000D09B7 /* LaunchScreen.storyboard in Resources */,
 				8E751E942D009AFE000D09B7 /* Assets.xcassets in Resources */,
-				8E751E922D009AFD000D09B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +151,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E751EA32D00ABEA000D09B7 /* Item.swift in Sources */,
 				8E751E8F2D009AFD000D09B7 /* ViewController.swift in Sources */,
 				8E751E8B2D009AFD000D09B7 /* AppDelegate.swift in Sources */,
+				8E751EA52D00B3D5000D09B7 /* RepositoryCell.swift in Sources */,
 				8E751E8D2D009AFD000D09B7 /* SceneDelegate.swift in Sources */,
+				8E751EA12D00A12A000D09B7 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8E751E902D009AFD000D09B7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E751E912D009AFD000D09B7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8E751E952D009AFE000D09B7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +300,6 @@
 				INFOPLIST_FILE = vk_testApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +327,6 @@
 				INFOPLIST_FILE = vk_testApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E751EA92D00BCB3000D09B7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E751EAA2D00BCB3000D09B7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E751EA92D00BCB3000D09B7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E751E7F2D009AFD000D09B7 /* Project object */;
 }
