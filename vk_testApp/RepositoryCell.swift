@@ -26,7 +26,7 @@ final class RepositoryCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 14)
-        label.numberOfLines = 0
+        label.numberOfLines = 0 
         return label
     }()
     
@@ -43,7 +43,6 @@ final class RepositoryCell: UITableViewCell {
     func configCellImage(photo: String, name: String, description: String) {
         print("Configuring cell with photo: \(photo), name: \(name), description: \(description)")
         
-        // Clear the cache only if necessary, otherwise it can be called once during app lifecycle
         cache.clearMemoryCache()
         cache.clearDiskCache()
         
@@ -62,7 +61,7 @@ final class RepositoryCell: UITableViewCell {
             switch result {
             case .success(let image):
                 print("Successfully loaded image")
-                self.RepositoryImageView.contentMode = .scaleAspectFill
+                self.RepositoryImageView.contentMode = .scaleAspectFit
                 self.RepositoryImageView.image = image.image
             case .failure(let error):
                 print("Error loading image: \(error.localizedDescription)")

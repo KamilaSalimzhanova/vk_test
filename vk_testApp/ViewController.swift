@@ -51,7 +51,7 @@ final class ViewController: UIViewController {
                 }
             }, receiveValue: { [weak self] items in
                 print("Received \(items.count) items for page \(page).")
-                self?.items.append(contentsOf: items) // Append new items to the existing list
+                self?.items.append(contentsOf: items) 
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                     print("Table view reloaded with new items.")
