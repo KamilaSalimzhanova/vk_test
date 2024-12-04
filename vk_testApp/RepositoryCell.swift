@@ -32,7 +32,6 @@ final class RepositoryCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        print("Initializing RepositoryCell")
         setupUI()
     }
     
@@ -41,7 +40,6 @@ final class RepositoryCell: UITableViewCell {
     }
     
     func configCellImage(photo: String, name: String, description: String) {
-        print("Configuring cell with photo: \(photo), name: \(name), description: \(description)")
         
         cache.clearMemoryCache()
         cache.clearDiskCache()
@@ -55,12 +53,9 @@ final class RepositoryCell: UITableViewCell {
         }
         
         RepositoryImageView.kf.indicatorType = .activity
-        print("Setting image from URL: \(imageUrl)")
-        
         RepositoryImageView.kf.setImage(with: imageUrl) { result in
             switch result {
             case .success(let image):
-                print("Successfully loaded image")
                 self.RepositoryImageView.contentMode = .scaleAspectFit
                 self.RepositoryImageView.image = image.image
             case .failure(let error):
@@ -70,7 +65,6 @@ final class RepositoryCell: UITableViewCell {
     }
     
     private func setupUI() {
-        print("Setting up UI for RepositoryCell")
         [RepositoryImageView, nameLabel, descriptionLabel].forEach {
             contentView.addSubview($0)
         }
@@ -90,17 +84,13 @@ final class RepositoryCell: UITableViewCell {
             descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
             descriptionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
         ])
-        
-        print("UI setup complete")
     }
     
     static func clear() {
-        print("Clearing image cache")
         let cache = ImageCache.default
         cache.clearMemoryCache()
         cache.clearDiskCache()
         cache.cleanExpiredMemoryCache()
         cache.backgroundCleanExpiredDiskCache()
-        print("Image cache cleared")
     }
 }
